@@ -1,0 +1,148 @@
+{
+    "intents": [
+      {
+        "tag": "greeting",
+        "patterns": [
+          "Hi",
+          "Hey",
+          "How are you",
+          "Is anyone there?",
+          "Hello",
+          "Good day"
+        ],
+        "responses": [
+          "Hello, thanks for visiting, please have a look at this guide,<br/> <br>Get information for live aartis - Type 'Live aarti'<br/> <br>Get facts for Ganesh Chaturthi festival - Type 'tell me a fact'<br/> <br>Want to know about ashtavinayak route - Type 'ashtavinayak route'<br/>"
+        ]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Bye", "See you later", "Goodbye"],
+        "responses": [
+          "See you later, thanks for visiting",
+          "Have a nice day",
+          "Bye! Come back again soon."
+        ]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "That's helpful", "Thanks a lot!"],
+        "responses": ["Happy to help!, And Happy Ganesh Chaturthi :D"]
+      },
+      {
+        "tag": "Features",
+        "patterns": [
+          "What kind of help do you offer?",
+          "How can you help me?",
+          "What do you provide?"
+        ],
+        "responses": [
+          "We will provide you information of your nearest ganpati pandals you can visit based on your primary location. You need to access the search tab of the site"
+        ]
+      },
+      {
+        "tag": "Cities",
+        "patterns": [
+          "In what cities you provide Ganpati pandal locations?",
+          "What cities do you cover for Ganpati pandals?",
+          "which cities you give ganpati pandal location?"
+        ],
+        "responses": [
+          "We provide Ganpati pandal locations in cities such as Mumbai, Pune, Thane, Palghar, Raigad, Navi Mumbai, Nagpur, Satara, Hyderabad, Delhi."
+        ]
+      },
+      {
+        "tag": "Live",
+        "patterns": [
+          "Where to watch live aarti of lalbaug cha raja",
+          "Where to watch live aartis?",
+          "Do you provide live aartis to watch?",
+          "Live aarti",
+          "Live artis"
+        ],
+        "responses": [
+          "<a href='https://www.youtube.com/watch?v=wRdxh6bYlkU'>Siddhivinayak Darshan Live</a><br/> <br><a href='https://www.youtube.com/watch?v=gmxIPdO_bHc'>Dagdusheth Darshan Live</a><br/>"
+        ]
+      },
+      {
+        "tag": "Glorious Bappa",
+        "patterns": [
+          "Where can I find most famous Ganpati pandals in India",
+          "Please tell me about famous ganpati pandals of India",
+          "Tell me which is richest ganpati in India",
+          "Which is the oldest ganpati in India?",
+          "Which ganpati is the tallest?",
+          "tallest ganpati",
+          "oldest ganpati",
+          "richest ganpati"
+        ],
+        "responses": [
+          "You will find this info in our Glorious Bappa section part, just go through it and you will get to know famous ganpati in every aspects such as height, oldest, richest, etc"
+        ]
+      },
+      {
+        "tag": "Ashtavinayak",
+        "patterns": [
+          "Where can I get information about ashtavinayak ganpatis?",
+          "Please give me information about all ashtavinayak ganpatis",
+          "Tell me more about Mayureshwar, Siddhivinayak, Ballaleshwar, Shri Dhundi Vinayak, Varadavinayak, Chintamani, Girijatmaj, Vighneshwar."
+        ],
+        "responses": [
+          "You will find this info in our Ashtavinayak sections where you will see rotating images of all ashtavinayak Ganpatis, just hover over and click on your desired ashtavinayak ganpati for more information"
+        ]
+      },
+      {
+        "tag": "Ashtavinayak-Route",
+        "patterns": [
+          "How to travel ashtavinayak ganpatis?",
+          "Can you guide me on how to visit all ashtavinayak ganpatis one by one?",
+          "Please give me address of all ashtavinayak ganpatis",
+          "Ashtavinayak Route"
+        ],
+        "responses": [
+          "According to Hindu Shastra, you will have to visit the Moreshwar temple at Morgaon first and then in sequence visit the temples at Siddhatek, Pali, Mahad, Thevur, Lenyandri, Ozar, Ranjangaon and in last visit the Moreshwar temple again. This will complete your Ashtavinayak Yatra.<br/> <br>Also you will find more in depth info in our Ashtavinayak sections where you will see rotating images of all ashtavinayak Ganpatis, just hover over and click on your desired ashtavinayak ganpati for more information"
+        ]
+      },
+      {
+        "tag": "Information",
+        "patterns": [
+          "What information do I need to provide?",
+          "What info do you need?"
+        ],
+        "responses": [
+          "In search tab select your primary city and this site will give you locations of famous Ganpati pandals in your city."
+        ]
+      },
+      {
+        "tag": "Payments",
+        "patterns": [
+          "Do you take some kind of payment?",
+          "Do you charge fee for your services?",
+          "Is this service free?"
+        ],
+        "responses": [
+          "Yes, its completely free :D",
+          "No we do not charge for this service, its completely free :D"
+        ]
+      },
+      {
+        "tag": "Facts",
+        "patterns": [
+          "Tell me a fact about Ganesh Ji!",
+          "Tell me a fact about Ganpati Bappa",
+          "Tell Fact"
+        ],
+        "responses": [
+          "According to Shivpuran, it was Parvati's friends Jaya and Vijaya's decision to make Lord Ganesha. They had suggested Parvati that Nandi and other follow the instructions of Lord Shiva only. Therefore, there should be someone who follows Parvati's orders too. Hence, Parvati made Ganesha from the dirt of her body.",
+          "According to Brahmavavart Puran, when Parshuram went to Kailash Mountain to meet Shiva, he was meditating. Lord Ganesha did not allow Parshuram to meet Shiva. Parshuram got angry and attacked Ganesha. The weapon he used to attack Ganesha was given to him by Lord Shiva only. Ganesha did not want the attack to go waste as it was his father's weapon, so he took the attack in his teeth and thus lost one of his teeth. Since then he is known as Ekdant.",
+          "Mahabharat epic has been written by Lord Ganesha.",
+          "In 1893, revolutionary freedom fighter Lokmanya Tilak urged the masses to come together to celebrate Ganesh Chaturthi. His main motive was to inculcate the feeling of patriotism among people at a time when British discouraged social gatherings.",
+          "The longest immersion procession is that of Mumbai's Lalbaugcha Raja, which starts at around 10 am and ends the next morning, taking nearly 24 hours.",
+          "Lord Ganesha has around 108 names, including Vighna Harta (the remover of obstacles) and Buddhi Pradaayaka (the giver of wisdom and intellect).",
+          "While Ganesh Chaturthi was generally an idea by Lokmanya Tilak to encourage social gatherings, the original birth date of Ganesh Ji falls in february according to Marathi calendar generally known as Tithis(dates)",
+          "Panchamukhi Ganesha is considered to be the supreme form of lord Ganesha aka Mahaganpati. It has five faces. The five faces symbolize the five faces or five koshas that make for human physique. They are: Annamaya Kosha : This is the food sheath and corresponds roughly to the physical body. Pranamaya Kosha : This is the vital energy and it represents the subtle body, nadis, chakras and kundalini. Manomaya Kosha : This is the mental sheath which represents the mind and the organs of perception. Vijnanamaya Kosha : This is the wisdom sheath which represents vijnana, or intellect, the talent which discriminates, determines or wills. Anandamaya Kosha : This is the cosmic bless sheath and represents the eternal center of consciousness.",
+          "In Hinduism we mostly preach the feelings attached with science and behind it. When we bow down down to Ganesha, we not only bow down to work of art but we also bow down to a divine figure which has some significance and meaning for our motivation in life, and spirituality explains it as source of energy",
+          "According to Hindu Shastra, you will have to visit the Moreshwar temple at Morgaon first and then in sequence visit the temples at Siddhatek, Pali, Mahad, Thevur, Lenyandri, Ozar, Ranjangaon and in last visit the Moreshwar temple again. This will complete your Ashtavinayak Yatra."
+        ]
+      }
+    ]
+  }
