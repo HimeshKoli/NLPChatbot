@@ -13,6 +13,6 @@ EXPOSE $PORT
 
 #CMD ["flask", "run", "--bind 0.0.0.0:$PORT"]
 #CMD flask run --bind 0.0.0.0:$PORT - no such bind
-#CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app - working but not giving any response
+CMD gunicorn --workers=4 --bind 0.0.0.0:$PORT app:app
 #CMD flask run gunicorn --workers=4 --bind 0.0.0.0:$PORT
-CMD run --bind 0.0.0.0:$PORT app:app
+#CMD run --bind 0.0.0.0:$PORT app:app
