@@ -11,4 +11,4 @@ COPY . .
 
 EXPOSE $PORT
 
-CMD ["python3", "app_flask.py", "run", "--bind 0.0.0.0:$PORT"]
+CMD ["python3", "app_flask.py", "run", "gunicorn", "--workers=4", "--bind 0.0.0.0:$PORT"]
