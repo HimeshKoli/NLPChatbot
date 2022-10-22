@@ -7,7 +7,7 @@ COPY requirements.txt .
 RUN pip install -r requirements.txt
 
 #RUN pip install -r requirements.txt
-RUN python -c "import nltk; nltk.download('punkt')"
+#RUN python -c "import nltk; nltk.download('punkt')"
 
 COPY . .
 
