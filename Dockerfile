@@ -1,15 +1,14 @@
 FROM python:3.8-slim-buster
 
-#COPY . /app
-COPY requirements.txt .
+COPY . /app
+#COPY requirements.txt .
 
-#WORKDIR /app
+WORKDIR /app
+#RUN pip install -r requirements.txt
+
 RUN pip install -r requirements.txt
 
-#RUN pip install -r requirements.txt
-#RUN python -c "import nltk; nltk.download('punkt')"
-
-COPY . .
+RUN python -c "import nltk; nltk.download('punkt')"
 
 EXPOSE $PORT
 
