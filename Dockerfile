@@ -9,7 +9,7 @@ WORKDIR /app
 RUN pip install -r requirements.txt
 # COPY . .
 
-RUN -c "import nltk; nltk.download('punkt')"
+RUN python -c "import nltk; nltk.download('punkt')"
 
 EXPOSE $PORT
 
