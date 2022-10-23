@@ -8,7 +8,7 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-RUN python -c "import nltk; nltk.download('punkt', download_dir='/usr/local/nltk_data')"
+RUN python -c "import nltk; nltk.download('punkt')"
 
 ENV NLTK_DATA /nltk_data/
 

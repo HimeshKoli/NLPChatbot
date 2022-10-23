@@ -6,7 +6,7 @@
 3) Workflow of our Analysis
 4) Software and tools requirement for end to end implementation
 5) References
-6) Production stage of model (with Docker and AWS configuration)
+6) Production stage of model (complete CI-CD pipeline integration through GitHub with Docker container over Heroku cloud service)
 
 ## Use case of project:
 The project's use case was to make an interactive chatbot which will guide user about Ganesh Chaturthi festival which is 
@@ -16,9 +16,9 @@ different sources and generating a proper csv file and I (Himesh Koli) was solel
 <br>[Our website - head over to Aboutus page to see our team](https://travelwithbappa.web.app/)
 
 ## Basics of NLP
-Natural Language Processing is a specialized field which deals with text based data. We first imported ```nltk``` library 
+Natural Language Processing is a specialized field which deals with Human language text based data. We first imported ```nltk``` library 
 to have access to its various functions which will help us pre-process our input messages in a way the system will 
-understand. The functions we imported from ```nltk``` library for our project are as follows:
+understand. The functions we used from ```nltk``` library for our project are as follows:
 
 **Tokenization**
 
@@ -59,13 +59,13 @@ o/p: [1. 0. 1. 0. 1. 1. 1.]
 ```
 Now sent2 here is sentence we are interested and the o/p we got is its vector identification.
 
-In our project's case All_words are all patterns accumulated words and when user will pass something it will then use 
+In our project's case All_words are all patterns from json file and when user will pass something it will then use 
 our nltk functions to preprocess and bring it in vector form like the example above and then use it to classify among 
 which specific tag it belongs, in which the vector form will be differentiating factor.
 
 ## Workflow of our analysis:
 
-1) Firstly made a json file which contains all our tags, user inputs and responses which will help us identify what type
+1) Firstly made a json file which contains all our tags, patterns(user inputs) and responses which will help us identify what type
 of question user is asking and based on that the respective response under same tag will get trigger in the form of 
 output. (intents.json)
 2) Then we imported all our basic NLP related functions which will help us preprocess our unstructured text and make it
@@ -100,11 +100,15 @@ function based code from scratch for GDP prediction project. Before doing this c
 was only limited to jupyter notebook which was very unstructured and informal. It was very nice experience doing this 
 chatbot project, and I really learned alot.
 
-1) [Knowledge about NLP terms and its syllabus I learned in my institution]
+1) [Knowledge about NLP terms and its syllabus I learned in my institution from ITVedant]
 2) [Online resource 1 - Machine Learning Mastery](https://machinelearningmastery.com)
 3) [Online resource 2 - Analytics Vidhya](https://www.analyticsvidhya.com/)
 4) [Videos I referred while building this chatbot - Python Engineer](https://www.youtube.com/watch?v=RpWeNzfSUHw&list=PLqnslRFeH2UrFW4AUgn-eY37qOAWQpJyg)
 5) [Knowledge on implementing PyTorch framework - Python Engineer](https://www.youtube.com/watch?v=EMXfZB8FVUA&list=PLqnslRFeH2UrcDBWF5mfPGpqQDSta6VK4)
+6) [Referred this video to make a CI-CD pipeline to push code to Heroku platform - Krish Naik](https://youtu.be/Gs15V79cauo)
+
+## Production stage of model:
+1) Set up my project's files for GitHub repo
 
 ## Problems I encountered during coding stage
 1) First and foremost challenge was to gather user patterns(user inputs) to put into json file, so took suggestions from 
