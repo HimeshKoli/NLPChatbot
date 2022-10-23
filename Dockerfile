@@ -10,10 +10,6 @@ RUN pip install -r requirements.txt
 
 RUN python -c "import nltk; nltk.download('punkt', download_dir='/usr/local/nltk_data')"
 
-# ENV NLTK_DATA /nltk_data/
-#
-# ADD . $NLTK_DATA
-
 EXPOSE $PORT
 
 #CMD ["flask", "run", "--bind 0.0.0.0:$PORT"]
