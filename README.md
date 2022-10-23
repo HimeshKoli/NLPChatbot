@@ -108,7 +108,8 @@ chatbot project, and I really learned alot.
 6) [Referred this video to make a CI-CD pipeline to push code to Heroku platform - Krish Naik](https://youtu.be/Gs15V79cauo)
 
 ## Production stage of model:
-1) Set up my project's files for GitHub repo
+1) Set up my project's files for my GitHub repo using Git commands
+2) Created Heroku account and in it created an app through which deployment will happen
 
 ## Problems I encountered during coding stage
 1) First and foremost challenge was to gather user patterns(user inputs) to put into json file, so took suggestions from 
