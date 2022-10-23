@@ -8,9 +8,11 @@ WORKDIR /app
 
 RUN pip install -r requirements.txt
 
-RUN python -c "import nltk; nltk.download('punkt')"
+RUN python -c "import nltk; nltk.download('punkt', download_dir='/usr/local/nltk_data')"
 
-COPY -R /root/nltk_data/ /app/nltk_data
+ENV NLTK_DATA /nltk_data/
+
+ADD . $NLTK_DATA
 
 EXPOSE $PORT
 
