@@ -10,7 +10,7 @@ RUN pip install -r requirements.txt
 
 RUN python -c "import nltk; nltk.download('punkt')"
 
-COPY /root/nltk_data/ /app/nltk_data
+COPY -R /root/nltk_data/ /app/nltk_data
 
 EXPOSE $PORT
 
