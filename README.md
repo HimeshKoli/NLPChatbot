@@ -22,13 +22,13 @@ Natural Language Processing is a specialized field which deals with Human langua
 to have access to its various functions which will help us pre-process our input messages in a way the system will 
 understand. The functions we used from ```nltk``` library for our project are as follows:
 
-**Tokenization**
+**TOKENIZATION**
 
 The tokenizer is actually downloaded from ```punkt``` package through ```nltk.download('punkt')```. What it does is it 
 will basically separate each word, punctuation, number, special character in a sentence and make a list of it which we 
 will use later in *Bag_of_Words* concept.
 
-**Stemming**
+**STEMMING**
 
 Stemming is a concept in which the suffix part is cut from words in the context of pre-processing, which further reduces
 the corpus size and results in fast processing. For example: `information` will become `inform` which provides same context. 
@@ -38,12 +38,12 @@ it does not decide with respect to context of the sentence what meaning it shoul
 in some applications it may not be that fatal and can be used for its fast processing as compare to lemmatization. We 
 import PorterStemmer```from nltk.stem.porter``` which is a type of stemmer function for our model needs.
 
-**Removal of punctuation**
+**REMOVAL OF PUNCTUATION**
 
 This is not a function in nltk, but we need to remove any punctuation or any special chars from list of stemmed words 
 to pass it in all words, for preprocessing.
 
-**Bag_of_Words**
+**BAG_OF_WORDS**
 
 BoW too is not some function to be imported from nltk library rather it is a concept which is used to give vector 
 identification to our text. The reason behind this is that our system cannot process text inputs directly, so giving our 
@@ -114,7 +114,7 @@ chatbot project, and I really learned alot.
 2) Created Heroku account and in it created an app through which deployment will happen
 3) Now create docker file with all your contents.
 4) Now important step, for to build our docker container in GitHub and to push it over heroku we need a .yaml file which will 
-have a workflow dedicated to build, push and release docker container over heroku.
+have a workflow dedicated to build, push and release docker container from GitHub to heroku.
 5) Create a .GitHub directory in your root project folder, in it create workflows directory and in that create main.yaml file
 which will contain that workflow. (You can just copy the content from my main.yaml file from my repo)
 6) Now we will need 3 secret keys which will help my GitHub repo to interact with docker account and app created in it.
@@ -130,8 +130,9 @@ which will contain that workflow. (You can just copy the content from my main.ya
     in it.
 7) Once setting up secret keys now push your .github directory which contains yaml file to your GitHub and once pushed 
 automatically it will start to build container with all the files you configured above
-8) After it's done building, it directly pushes it to heroku account, and you need to click Open app in your app section 
+8) After it's done building, it directly pushes container to heroku account, and you need to click "Open app" in your app section 
 of heroku to see the deployed version of your project.
+9) If any error occurred, you can just check logs and resolve it.
 
 
 ## Problems I encountered during coding stage
@@ -149,4 +150,21 @@ was unsupported due to some type of characters in json responses. So solved this
 those characters.
 
 ## Problems I encountered during deployment stage
-1) I have already deployed this project
+1) I have already deployed this project over python-anywhere which is a cloud platform, but wanted to make a CI-CD pipeline
+through GitHub and Heroku seemed nice to deploy over it.
+2) Over heroku I pushed with help of docker because when I tried normal deployment using Procfile, it was taking python 
+version 3.10 which my PyTorch library was having issues with as it only supported till 3.9.
+<br>When I specified to use python 3.8, it was unsupported on heroku build stack 22, I tried to install build stack 18 
+where 3.8 was supported but building it I was having various issues with it, so ultimately I dropped and went for docker 
+based push.
+3) Now while building docker image, when I pushed it only UI of chatbot came which was through rendering HTML at homepage.
+<br>From logs got to know it wasn't getting to predict page where response was supposed to come after giving input, so I 
+remembered last time while deploying over python-anywhere that, app.js needs to have heroku link with predict function 
+instead of localhost which we had written to display locally so edited that with heroku link and predict function.
+4) But still problem persisted, so from stack one user mentioned that when dealing with nltk downloads, we need to specify 
+it in docker image because in requirements.txt we only specified nltk library and not `punkt` or any other nltk based module.
+<br>Still it was unable to locate the `punkt` package, so gave the path where it downloaded locally and then added to 
+image directory.
+[Link for that stack overflow solution](https://stackoverflow.com/a/66820188/18761894).
+
+
