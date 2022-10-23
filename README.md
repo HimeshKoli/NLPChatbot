@@ -7,6 +7,8 @@
 4) Software and tools requirement for end to end implementation
 5) References
 6) Production stage of model (complete CI-CD pipeline integration through GitHub with Docker container over Heroku cloud service)
+7) Problems I encountered during coding stage
+8) Problems I encountered during deployment stage
 
 ## Use case of project:
 The project's use case was to make an interactive chatbot which will guide user about Ganesh Chaturthi festival which is 
@@ -110,6 +112,27 @@ chatbot project, and I really learned alot.
 ## Production stage of model:
 1) Set up my project's files for my GitHub repo using Git commands
 2) Created Heroku account and in it created an app through which deployment will happen
+3) Now create docker file with all your contents.
+4) Now important step, for to build our docker container in GitHub and to push it over heroku we need a .yaml file which will 
+have a workflow dedicated to build, push and release docker container over heroku.
+5) Create a .GitHub directory in your root project folder, in it create workflows directory and in that create main.yaml file
+which will contain that workflow. (You can just copy the content from my main.yaml file from my repo)
+6) Now we will need 3 secret keys which will help my GitHub repo to interact with docker account and app created in it.
+    1) Secret HEROKU_API_KEY(refer yaml file) - go to your project repo in GitHub >> settings >> secrets >> actions >> New repository secret >> 
+    from yaml file copy this `HEROKU_API_KEY` and paste in Name section in New secret section.
+        1. And in value you need to put api_key for that head over your heroku account >> account settings >> and below you 
+        will find api_key reveal it, copy and paste in value section below name >> Add.
+    2. Secret HEROKU_EMAIL - select New repository after creating secret api_key therein and add `HEROKU_EMAIL` from 
+    yaml file and paste in name section and for value enter your emailid related to your docker account
+    <br>This 2 steps will basically configure your GitHub repo with your docker account.
+    3. Now last Secret HEROKU_APP_NAME - select new repository therein and add `HEROKU_APP_NAME` from 
+    yaml file and paste in name section and for its value add your app name from your heroku account which you have created
+    in it.
+7) Once setting up secret keys now push your .github directory which contains yaml file to your GitHub and once pushed 
+automatically it will start to build container with all the files you configured above
+8) After it's done building, it directly pushes it to heroku account, and you need to click Open app in your app section 
+of heroku to see the deployed version of your project.
+
 
 ## Problems I encountered during coding stage
 1) First and foremost challenge was to gather user patterns(user inputs) to put into json file, so took suggestions from 
@@ -121,6 +144,9 @@ website, so added some of my own tags and responses such as facts, doubts regard
 is made for system to read and not for general purposes, it was hard to find solution but then stumbled upon one stack 
 overflow article in it user mentioned to use `<br>` tags to break lines, and use `<href>` tags to provide links, which 
 was very useful.
-3) Lastly ran into error while saving the file in `training_data.py` using PyTorch `save` function. The extension `.pth` 
+3) Lastly ran into some issues while saving the file in `training_data.py` using PyTorch `save` function. The extension `.pth` 
 was unsupported due to some type of characters in json responses. So solved this by using `.h5` extension which supported
 those characters.
+
+## Problems I encountered during deployment stage
+1) I have already deployed this project
