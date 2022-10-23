@@ -14,10 +14,8 @@ def index_get():
 
 @app.route('/predict', methods=['POST'])
 def predict():
-    text = request.get_json().get(
-        'message')  # the input which user will give will get called by request.get_json function and get stored in text variable
-    response1 = response(
-        text)  # the function we created response has our model to compute this response we will get from user in text variable and classify it and give respective output
+    text = request.get_json().get('message')  # the input which user will give will get called by request.get_json function and get stored in text variable
+    response1 = response(text)  # the function we created response has our model to compute this response we will get from user in text variable and classify it and give respective output
     message = {'answer': response1}
     return jsonify(message)
 
